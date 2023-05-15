@@ -3,62 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
-<iframe src="navigation.html" ></iframe>
-<a href="navigation.html">Back</a>
-<h1>Tuiter</h1>
-<h2>Home</h2>
-<img src="avatar.jpg" height="48px" width="48px"/>
-<form id="post-new-tuits">
-    <textarea placeholder="What's happening?"></textarea>
-    <br/>
-    <select id="options">
-        <option selected value="EVERYONE">Everyone can reply</option>
-        <option value="FOLLOWING">People you follow</option>
-        <option value="MENTIONED">Only people you mention</option>
-    </select>
-</form>
-<hr/>
-<input type="file"/>
-<button type="reset">Tuit</button>
-<hr/>
+<table>
+    <tr>
+        <td style="vertical-align: top">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="bookmarks.html">Bookmarks</a></li>
+                <li><a href="lists.html">Lists</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="tuit.html">Tuit</a></li>
+                <li><a href="reply.html">Reply</a></li>
+            </ul>
+        </td>
+        <td style="vertical-align: top">
+            <a href="navigation.html">Back</a>
+            <h1>Tuiter</h1>
+            <h2>Home</h2>
+            <img src="avatar.jpg" height="48px" width="48px"/>
+            <form id="post-new-tuits">
+                <textarea placeholder="What's happening?"></textarea>
+                <br/>
+                <select id="options">
+                    <option selected value="EVERYONE">Everyone can reply</option>
+                    <option value="FOLLOWING">People you follow</option>
+                    <option value="MENTIONED">Only people you mention</option>
+                </select>
+            </form>
+            <hr/>
+            <input type="file"/>
+            <button type="reset">Tuit</button>
+            <hr/>
 
-<ul>
-    <li>
-        <a href="topic.html">Topic 123</a></br>
-        <img src="avatar.jpg" height="48px" width="48px"/>
-        <a href="profile.html">Jiaomei</a> @jiaomei - 2h
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <a href="reply.html">Reply</a> 123 |
-        <a href="retuit.html">Retuit</a> 234 |
-        <a href="like.html">Like</a> 345 |
-        <a href="share.html">Share</a>
-    </li>
-    </br>
-    <li>
-        <a href="topic.html">Topic 234</a></br> <!-- should i connect to another topic hyperlink? TODO -->
-        <img src="bob.jpeg" height="48px" width="48px"/>
-        <a href="profile.html">Bob</a> @bob - 4h
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <a href="reply.html">Reply</a> 123 |
-        <a href="retuit.html">Retuit</a> 234 |
-        <a href="like.html">Like</a> 345 |
-        <a href="share.html">Share</a>
-    </li>
-    <!-- TODO
-    Create a third tuit that includes a video as described in the book in section 2.7 Embedding Videos In HTML Documents
-    -->
-</ul>
+            <ul>
+                <li>
+                    <a href="topic.html">Topic 123</a></br>
+                    <img src="avatar.jpg" height="48px" width="48px"/>
+                    <a href="profile.html">Jiaomei</a> @jiaomei - 2h
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type and
+                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                        leap
+                        into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                        the
+                        release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                        software like
+                        Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <a href="reply.html">Reply</a> 123 |
+                    <a href="retuit.html">Retuit</a> 234 |
+                    <a href="like.html">Like</a> 345 |
+                    <a href="share.html">Share</a>
+                </li>
+                </br>
+                <li>
+                    <a href="topic.html">Topic 234</a></br> <!-- should i connect to another topic hyperlink? TODO -->
+                    <img src="bob.jpeg" height="48px" width="48px"/>
+                    <a href="profile.html">Bob</a> @bob - 4h
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type and
+                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                        leap
+                        into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                        the
+                        release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                        software like
+                        Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <a href="reply.html">Reply</a> 123 |
+                    <a href="retuit.html">Retuit</a> 234 |
+                    <a href="like.html">Like</a> 345 |
+                    <a href="share.html">Share</a>
+                </li>
+                <!-- TODO
+                Create a third tuit that includes a video as described in the book in section 2.7 Embedding Videos In HTML Documents
+                -->
+                <br/>
+                <li>
+                    <a href="topic.html">Topic 345</a></br>
+                    <img src="avatar.jpg" height="48px" width="48px"/>
+                    <a href="profile.html">Jiaomei</a> @jiaomei - 3h
+                    <p>
+                        <object height="350" width="425">
+                            <param name="movie" value="https://www.youtube.com/watch?v=xbQRflXw9E8">
+                            <param name="wmode" value="transparent">
+                            <embed height="350" src="https://www.youtube.com/v/R3ymHMgFAps?rel=0"
+                                   type="application/x-shockwave-flash" width="425" wmode="transparent">
+                        </object>
+                    </p>
+                    <a href="reply.html">Reply</a> 123 |
+                    <a href="retuit.html">Retuit</a> 234 |
+                    <a href="like.html">Like</a> 345 |
+                    <a href="share.html">Share</a>
+                </li>
+
+            </ul>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
