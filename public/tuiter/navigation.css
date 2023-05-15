@@ -1,0 +1,18 @@
+table {
+    width: 200px;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+td a {
+    text-decoration: none;
+    color: #333;
+}
+
+td a:hover {
+    color: #ff0000;
+}
