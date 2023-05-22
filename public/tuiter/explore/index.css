@@ -1,0 +1,98 @@
+.wd-explore-page {
+    border: 1px solid lightgray;
+    align-items: center;
+    margin: auto;
+    width: 600px;
+}
+
+.wd-search-box {
+    width: 85%;
+    background-color: lightgray;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    margin: 15px;
+    float: left;
+}
+
+.wd-pos-top-right {
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 120%;
+    color: #373b3e;
+}
+
+.wd-search-icon {
+    float: left;
+    padding: 10px;
+    color: #373b3e;
+}
+
+.wd-navigation-bar {
+    width: 100%;
+    margin: 20px;
+    align-items: center;
+    border: none;
+    float: left;
+    font-weight: bold;
+}
+
+.wd-navigation-bar-ul {
+    float: left;
+    padding: 0 20px 10px 20px;
+    list-style: none;
+    color: #565e64;
+}
+
+.wd-navigation-bar-ul-active {
+    float: left;
+    padding: 0 20px 10px 20px;
+    display: inline-flex;
+    list-style: none;
+    color: black;
+    border-bottom: #86b7fe 4px solid;
+}
+
+.wd-main-tweet-title {
+    position: relative;
+    margin-top: -40px;
+    left: 20px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.wd-tweet-trending {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+.wd-fg-color-grey {
+    color: darkgray;
+}
+
+.wd-bg-color-grey {
+    background-color: lightgray;
+}
+
+.wd-fg-bold {
+    font-weight: bold;
+}
+
+.wd-fg-color-white {
+    color: white;
+}
+
+.wd-dots {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 530px;
+    color: #373b3e;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

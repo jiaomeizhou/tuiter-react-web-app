@@ -1,0 +1,11 @@
+.wd-fg-color-grey {
+    color: darkgray;
+}
+.wd-border-thin-light-grey {
+    border-color: lightgray;
+    border-radius: 50px;
+    border-width: 10px;
+}
+.wd-padding-12px {
+    padding: 12px;
+}
