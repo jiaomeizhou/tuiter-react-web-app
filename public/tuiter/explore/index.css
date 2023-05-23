@@ -3,6 +3,7 @@
     align-items: center;
     margin: auto;
     width: 600px;
+    font-family: Arial, sans-serif;
 }
 
 .wd-search-box {
@@ -58,7 +59,7 @@
 .wd-main-tweet-title {
     position: relative;
     margin-top: -40px;
-    left: 20px;
+    margin-left: 20px;
     font-weight: bold;
     font-size: x-large;
 }
@@ -85,14 +86,3 @@
     color: white;
 }
 
-.wd-dots {
-    position: absolute;
-    margin-top: 15px;
-    margin-left: 530px;
-    color: #373b3e;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
