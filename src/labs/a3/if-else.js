@@ -1,6 +1,5 @@
 function IfElse() {
     console.log('If else');
-    // TODO true1, false1
     let true1 = true
     let false1 = false
     if(true1) {
