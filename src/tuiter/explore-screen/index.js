@@ -28,6 +28,12 @@ function ExploreScreen() {
                 <li className="nav-item">
                     <a className="nav-link">News</a>
                 </li>
+                <li className="nav-item">
+                    <a className="nav-link">Sports</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link">Entertainment</a>
+                </li>
             </ul>
             <div className="position-relative mb-2">
                 <img src="/images/starship.png" className="w-100"/>
