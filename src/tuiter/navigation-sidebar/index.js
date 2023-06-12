@@ -13,7 +13,7 @@ const NavigationSidebar = () => {
     const {currentUser} = useSelector((state) => state.user);
     const {pathname} = useLocation();
     const [ignore, tuiter, active] = pathname.split("/");
-    const links = ['home', "explore", "notifications", "messages", "bookmarks", "lists", "profile", "more"];
+    const links = ['home', "explore", "notifications", "messages", "bookmarks", "lists", "more"];
     const icons = [<FaHome/>, <BiHash/>, <GrNotification/>, <BsEnvelope/>, <BsBookmark/>,
         <AiOutlineUnorderedList/>, <RxAvatar/>, <CiCircleMore/>]
     return (
@@ -32,11 +32,10 @@ const NavigationSidebar = () => {
 
                 </Link>
             )}
-            {!currentUser && <Link className="list-group" to="/tuiter/login"> Login </Link>}
-            {!currentUser && <Link className="list-group" to="/tuiter/register">Register</Link>}
-            {currentUser && <Link className="list-group" to="/tuiter/profile"> Profile </Link>}
+            {!currentUser && <Link className="list-group-item" to="/tuiter/login"> Login </Link>}
+            {!currentUser && <Link className="list-group-item" to="/tuiter/register">Register</Link>}
+            {currentUser && <Link className="list-group-item" to="/tuiter/profile"> Profile </Link>}
         </div>
-        // TODO how can I merge this list?
     );
 };
 export default NavigationSidebar;
