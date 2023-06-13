@@ -6,11 +6,12 @@ import {profileThunk, logoutThunk, updateUserThunk}
 
 function ProfileScreen() {
     const {currentUser} = useSelector((state) => state.user);
+    console.log(currentUser);
     const [profile, setProfile] = useState(currentUser);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const save = () => {
-        dispatch(updateUserThunk(profile));
+    const save = async () => {
+        await dispatch(updateUserThunk(profile));
     };
     // useEffect(async () => {
     //     const {payload} = await dispatch(profileThunk());
@@ -22,10 +23,11 @@ function ProfileScreen() {
             setProfile(payload);
         }
         fetchData();
-    },[]);
+    }, []);
     return (
         <div>
             <h1>Profile Screen</h1>
+            {/*<pre>{JSON.stringify(currentUser)}</pre>*/}
             {profile && (<div>
                     <div>
                         <label>First Name</label>

@@ -20,6 +20,7 @@ const TuitItem = (
             "replies": 123,
             "retuits": 432,
             "likes": 12345,
+            "dislikes": 0,
             "handle": "@spacex",
             "tuit": "This morning at 12:34 EST Earth time, a convey of Tesla CyberTrucks drove across the Martian landscape after picking up thr Curiosity, Sojourner, Spirit, and Perserance on their 6' beds "
         }
@@ -29,8 +30,9 @@ const TuitItem = (
     const deleteTuitHandler = (id) => {
         dispatch(deleteTuitThunk(id));
     }
-
+    // console.log(tuit);
     return (
+
         <li className="list-group-item">
             <div className="row">
                 <div className="col-2">
@@ -38,7 +40,8 @@ const TuitItem = (
                 </div>
 
                 <div className="col-10">
-                    <div><span className="fw-bolder">{tuit.userName} </span><MdVerified
+
+                    <div><span className="fw-bolder">{tuit.username} </span><MdVerified
                         className="text-primary"/> {tuit.handle} · {tuit.time}
                         <RxCross2 onClick={() => deleteTuitHandler(tuit._id)} className="float-end"/></div>
                     <div>{tuit.tuit}</div>

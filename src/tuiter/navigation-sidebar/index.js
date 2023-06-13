@@ -16,6 +16,7 @@ const NavigationSidebar = () => {
     const links = ['home', "explore", "notifications", "messages", "bookmarks", "lists", "more"];
     const icons = [<FaHome/>, <BiHash/>, <GrNotification/>, <BsEnvelope/>, <BsBookmark/>,
         <AiOutlineUnorderedList/>, <RxAvatar/>, <CiCircleMore/>]
+    // console.log("user : ", currentUser)
     return (
         <div className="list-group">
             <li className="list-group-item">

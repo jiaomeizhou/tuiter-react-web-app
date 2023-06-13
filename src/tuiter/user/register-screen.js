@@ -8,14 +8,16 @@ function RegisterScreen() {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const handleLogin = async () => {
+    const handleLogin = async (e) => {
         try {
             await dispatch(register({username, password}));
             navigate("/tuiter/profile");
         } catch (e) {
+            // TODO the alert window doesn't work
             alert(e);
         }
     };
+
     return (
         <div>
             <h1>Register Screen</h1>

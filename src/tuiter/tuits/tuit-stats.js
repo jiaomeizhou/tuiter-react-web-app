@@ -4,6 +4,7 @@ import {AiFillHeart, AiOutlineHeart, AiOutlineRetweet} from "react-icons/ai";
 import {FiShare} from "react-icons/fi";
 import {updateTuitThunk} from "../services/tuits-thunks";
 import {useDispatch} from "react-redux";
+import {LuThumbsDown} from "react-icons/lu";
 
 
 const TuitStats = ({
@@ -18,12 +19,13 @@ const TuitStats = ({
                            "replies": 123,
                            "retuits": 432,
                            "likes": 12345,
+                           "dislikes": 0,
                            "handle": "@spacex",
                            "tuit": "This morning at 12:34 EST Earth time, a convey of Tesla CyberTrucks drove across the Martian landscape after picking up thr Curiosity, Sojourner, Spirit, and Perserance on their 6' beds "
                        }
                    }) => {
-    const [likes, setLikes] = useState(tuit.likes);
-    const [isLiked, setLiked] = useState(tuit.liked);
+    // const [likes, setLikes] = useState(tuit.likes);
+    // const [isLiked, setLiked] = useState(tuit.liked);
 
     // const likeTuitHandler = () => {
     //     setLiked(!isLiked);
@@ -32,16 +34,19 @@ const TuitStats = ({
     const dispatch = useDispatch();
     return (
         <div className="row">
-            <div className="col-3"><FaRegComment/><span> {tuit.replies}</span></div>
-            <div className="col-3"><AiOutlineRetweet/><span> {tuit.retuits}</span></div>
+            <div className="col-2"><FaRegComment/><span> {tuit.replies}</span></div>
+            <div className="col-2"><AiOutlineRetweet/><span> {tuit.retuits}</span></div>
             <div className="col-3"><FaHeart
                 className="text-danger"
                 onClick={() =>
                     dispatch(updateTuitThunk({...tuit, likes: tuit.likes + 1}))
                 }
-            />
-                <span className="ms-2">{tuit.likes}</span></div>
-            <div className="col-3"><FiShare/></div>
+            /><span className="ms-2">{tuit.likes}</span></div>
+            <div className="col-2"><span onClick={() => {
+                dispatch(updateTuitThunk({...tuit, dislikes: tuit.dislikes + 1}))
+            }}>
+          <LuThumbsDown/> {tuit.dislikes}</span></div>
+            <div className="col-1"><FiShare/></div>
         </div>
     )
         ;
