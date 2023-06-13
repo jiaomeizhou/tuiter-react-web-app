@@ -15,7 +15,7 @@ const NavigationSidebar = () => {
     const [ignore, tuiter, active] = pathname.split("/");
     const links = ['home', "explore", "notifications", "messages", "bookmarks", "lists", "more"];
     const icons = [<FaHome/>, <BiHash/>, <GrNotification/>, <BsEnvelope/>, <BsBookmark/>,
-        <AiOutlineUnorderedList/>, <RxAvatar/>, <CiCircleMore/>]
+        <AiOutlineUnorderedList/>, <CiCircleMore/>]
     // console.log("user : ", currentUser)
     return (
         <div className="list-group">
@@ -33,9 +33,27 @@ const NavigationSidebar = () => {
 
                 </Link>
             )}
-            {!currentUser && <Link className="list-group-item" to="/tuiter/login"> Login </Link>}
-            {!currentUser && <Link className="list-group-item" to="/tuiter/register">Register</Link>}
-            {currentUser && <Link className="list-group-item" to="/tuiter/profile"> Profile </Link>}
+            {/*{!currentUser && <Link className="list-group-item" to="/tuiter/login"> Login </Link>}*/}
+            {/*{!currentUser && <Link className="list-group-item" to="/tuiter/register">Register</Link>}*/}
+            {/*{currentUser && <Link className="list-group-item" to="/tuiter/profile"> Profile </Link>}*/}
+            {!currentUser && (
+                <Link className={`list-group-item ${active === "login" ? "active" : ""}`} to="/tuiter/login">
+                    Login
+                </Link>
+            )}
+            {!currentUser && (
+                <Link className={`list-group-item ${active === "register" ? "active" : ""}`} to="/tuiter/register">
+                    Register
+                </Link>
+            )}
+            {currentUser && (
+                <Link className={`list-group-item ${active === "profile" ? "active" : ""}`} to="/tuiter/profile">
+                    <div className="row">
+                        <div className="d-none d-sm-block col-2"><RxAvatar/></div>
+                        <div className="d-none d-xl-block col-10">Profile</div>
+                    </div>
+                </Link>
+            )}
         </div>
     );
 };
