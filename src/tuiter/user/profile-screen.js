@@ -6,7 +6,7 @@ import {profileThunk, logoutThunk, updateUserThunk}
 
 function ProfileScreen() {
     const {currentUser} = useSelector((state) => state.user);
-    console.log(currentUser);
+    // console.log(currentUser);
     const [profile, setProfile] = useState(currentUser);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -27,7 +27,7 @@ function ProfileScreen() {
     return (
         <div>
             <h1>Profile Screen</h1>
-            <pre>{JSON.stringify(currentUser)}</pre>
+            {/*<pre>{JSON.stringify(currentUser)}</pre>*/}
             {profile && (<div>
                     <div>
                         <label>First Name</label>
