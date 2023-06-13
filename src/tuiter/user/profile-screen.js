@@ -24,14 +24,15 @@ function ProfileScreen() {
         }
         fetchData();
     }, []);
+    // console.log(profile);
     return (
         <div>
             <h1>Profile Screen</h1>
-            {/*<pre>{JSON.stringify(currentUser)}</pre>*/}
+            {/*<pre>{JSON.stringify(profile)}</pre>*/}
             {profile && (<div>
                     <div>
                         <label>First Name</label>
-                        <input type="text" value={profile.firstName}
+                        <input className="form-control" type="text" value={profile.firstName}
                                onChange={(event) => {
                                    const newProfile = {
                                        ...profile, firstName: event.target.value,
@@ -41,7 +42,7 @@ function ProfileScreen() {
                     </div>
                     <div>
                         <label>Last Name</label>
-                        <input type="text" value={profile.lastName}
+                        <input className="form-control" type="text" value={profile.lastName}
                                onChange={(event) => {
                                    const newProfile = {
                                        ...profile, lastName: event.target.value,
@@ -51,13 +52,13 @@ function ProfileScreen() {
                     </div>
                 </div>
             )}
-            <button
-                onClick={() => {
+            <button className="btn btn-danger mt-2"
+                    onClick={() => {
                     dispatch(logoutThunk());
                     navigate("/tuiter/login");
                 }}> Logout
             </button>
-            <button onClick={save}>Save</button>
+            <button className="btn btn-primary mt-2 ms-2" onClick={save}>Save</button>
         </div>);
 }
 
