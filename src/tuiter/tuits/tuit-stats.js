@@ -34,7 +34,7 @@ const TuitStats = ({
 
     return (
         <div className="row">
-            <pre>{JSON.stringify(tuit)}</pre>
+            {/*<pre>{JSON.stringify(tuit)}</pre>*/}
             <div className="col-2"><FaRegComment/><span> {tuit.replies}</span></div>
             <div className="col-2"><AiOutlineRetweet/><span> {tuit.retuits}</span></div>
             {/*<div className="col-3"><FaHeart className="text-danger" onClick={() =>*/}
