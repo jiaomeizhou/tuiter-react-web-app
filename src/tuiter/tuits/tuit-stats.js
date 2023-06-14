@@ -25,27 +25,58 @@ const TuitStats = ({
                        }
                    }) => {
     // const [likes, setLikes] = useState(tuit.likes);
-    // const [isLiked, setLiked] = useState(tuit.liked);
-
+    const [isLiked, setLiked] = useState(tuit.liked);
     // const likeTuitHandler = () => {
     //     setLiked(!isLiked);
     //     setLikes(isLiked === true ? likes - 1 : likes + 1);
     // };
     const dispatch = useDispatch();
+
     return (
         <div className="row">
+            <pre>{JSON.stringify(tuit)}</pre>
             <div className="col-2"><FaRegComment/><span> {tuit.replies}</span></div>
             <div className="col-2"><AiOutlineRetweet/><span> {tuit.retuits}</span></div>
-            <div className="col-3"><FaHeart
-                className="text-danger"
-                onClick={() =>
-                    dispatch(updateTuitThunk({...tuit, likes: tuit.likes + 1}))
-                }
-            /><span className="ms-2">{tuit.likes}</span></div>
-            <div className="col-2"><span onClick={() => {
-                dispatch(updateTuitThunk({...tuit, dislikes: tuit.dislikes + 1}))
-            }}>
-          <LuThumbsDown/> {tuit.dislikes}</span></div>
+            {/*<div className="col-3"><FaHeart className="text-danger" onClick={() =>*/}
+            {/*        dispatch(updateTuitThunk({...tuit, likes: tuit.likes + 1}))}/>*/}
+            {/*    <span className="ms-2">{tuit.likes}</span></div>*/}
+            <div className="col-3">
+                {tuit.liked === true ? (
+                    <FaHeart
+                        className="text-danger"
+                        onClick={() => dispatch(updateTuitThunk({...tuit, likes: tuit.likes - 1, liked: false}))}
+                    />
+                ) : (
+                    <AiOutlineHeart
+                        onClick={() => dispatch(updateTuitThunk({...tuit, likes: tuit.likes + 1, liked: true}))}
+                    />
+                )}
+                <span className="ms-2">{tuit.likes}</span>
+            </div>
+            <div className="col-2">
+                {/*<span onClick={() => {*/}
+                {/*    dispatch(updateTuitThunk({...tuit, dislikes: tuit.dislikes + 1}))*/}
+                {/*}}>*/}
+                {/*    <LuThumbsDown/> {tuit.dislikes}</span>*/}
+                {tuit.isDisliked ? (
+                    <LuThumbsDown
+                        onClick={() => dispatch(updateTuitThunk({
+                            ...tuit,
+                            dislikes: tuit.dislikes - 1,
+                            isDisliked: false
+                        }))}
+                    />
+                ) : (
+                    <LuThumbsDown
+                        onClick={() => dispatch(updateTuitThunk({
+                            ...tuit,
+                            dislikes: tuit.dislikes + 1,
+                            isDisliked: true
+                        }))}
+                    />
+                )}
+                <span className="ms-2">{tuit.dislikes}</span>
+            </div>
             <div className="col-1"><FiShare/></div>
         </div>
     )
