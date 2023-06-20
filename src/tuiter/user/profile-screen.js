@@ -28,7 +28,7 @@ function ProfileScreen() {
     return (
         <div>
             <h1>Profile Screen</h1>
-            {/*<pre>{JSON.stringify(profile)}</pre>*/}
+            <pre>{JSON.stringify(profile)}</pre>
             {profile && (<div>
                     <div>
                         <label>First Name</label>
